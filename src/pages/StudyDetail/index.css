@@ -1,0 +1,38 @@
+.study-detail-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 66px;
+  margin: 120px 8%;
+}
+
+.study-detail-grid-item.first img {
+  width: 100%;
+}
+
+.study-detail-grid-item.second > h2 {
+  margin-bottom: 24px;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.study-detail-grid-item.second > span {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: #757575;
+}
+
+.study-detail-image-wrapper {
+  max-width: 300px;
+}
+
+.study-detail-image-wrapper img {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.study-search-text {
+  margin-bottom: 80px;
+  text-align: center;
+}

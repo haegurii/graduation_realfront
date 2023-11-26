@@ -1,0 +1,21 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 160px;
+}
+
+.logo > img {
+  width: 40px;
+}
+
+.logo > span {
+  font-size: 35px;
+  font-weight:bold;
+  letter-spacing: 0.46px;
+  color:var(--color-main);
+}
+
+.logo:hover {
+  cursor:pointer;
+}

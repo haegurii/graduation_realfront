@@ -1,0 +1,10 @@
+.button-component {
+  margin-top: 34px;
+  padding: 15px 50px;
+  background-color: var(--color-main);
+  color: white;
+
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.46px;
+}
