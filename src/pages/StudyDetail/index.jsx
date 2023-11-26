@@ -3,8 +3,6 @@ import "./index.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import ImageContainer from "../../components/ImageContainer";
 import { useMemo } from "react";
-
-import testImage from "../../assets/images/test.png";
 import BackButton from "../../components/BackButton/index";
 
 const StudyDetail = () => {
@@ -12,7 +10,6 @@ const StudyDetail = () => {
   const location = useLocation();
   const item = location.state.item;
 
-  
   const { pathname } = useLocation();
 
   const currentTitle = useMemo(() => {
@@ -44,7 +41,6 @@ const StudyDetail = () => {
       </div>
 
       <BackButton onClick={useNavigate(-1)} />
-      
     </div>
   );
 };

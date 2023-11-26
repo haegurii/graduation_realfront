@@ -2,7 +2,7 @@ import ImageContainer from "../../components/ImageContainer";
 import Searchbar from "../../components/Searchbar";
 import StudyContent from "../../components/StudyContent";
 import Pagination from "../../components/Pagination";
-import { useLocation, useParams, useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import axiousInstance from "../../utils/axios";
 import { useEffect, useState } from "react";
 import SelectLimit from "../../components/SelectLimit/index";
@@ -32,7 +32,6 @@ const StudyConsonant = () => {
     fetchSignLanguages(page, limit);
   }, [page, limit]);
 
-
   const setTitle = () => {
     if (type === "consonant") {
       setType_KO("자음 모음");
@@ -45,7 +44,6 @@ const StudyConsonant = () => {
       setType_Grade("3");
     }
   };
-
 
   const fetchIndex = async () => {
     try {
@@ -93,11 +91,11 @@ const StudyConsonant = () => {
 
   return (
     <div>
-            <ImageContainer
+      <ImageContainer
         title={type_Grade + " 단계 " + type_KO + " 학습하기"}
         noButton
       />
-      
+
       <Searchbar />
 
       {searchValue && (
@@ -105,7 +103,9 @@ const StudyConsonant = () => {
           “{searchValue}”에 대한 검색 결과입니다.
         </h1>
       )}
+
       <StudyContent type={type} list={signLanguages} />
+
       <div className="pagination-container">
         <SelectLimit onLimitChange={setLimit} />
         <Pagination

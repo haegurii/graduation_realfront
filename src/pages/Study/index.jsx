@@ -1,6 +1,4 @@
 import "./index.css";
-
-import testImage from "../../assets/images/test.png";
 import word from "../../assets/images/word.png";
 import consonant from "../../assets/images/consonant.png";
 import sentence from "../../assets/images/sentence.png";
@@ -21,7 +19,7 @@ const Study = () => {
       <div className="list-container">
         <div
           className="item hover-scale"
-          onClick={() => navigate("/study/consonant")}
+          onClick={() => navigate("/study/consonant/1")}
         >
           <img src={consonant} alt="" />
           <h2>1단계 자음 모음 학습</h2>
@@ -29,7 +27,7 @@ const Study = () => {
 
         <div
           className="item hover-scale"
-          onClick={() => navigate("/study/word")}
+          onClick={() => navigate("/study/word/1")}
         >
           <img src={word} alt="" />
           <h2>2단계 단어 학습</h2>
@@ -37,7 +35,7 @@ const Study = () => {
 
         <div
           className="item hover-scale"
-          onClick={() => navigate("/study/sentence")}
+          onClick={() => navigate("/study/sentence/1")}
         >
           <img src={sentence} alt="" />
           <h2>3단계 문장 학습</h2>
