@@ -11,12 +11,6 @@ import * as webRTCHandler from "./webRTCHandler";
 import dotenv from "dotenv";
 dotenv.config();
 const API_KEY = process.env.REACT_APP_API_KEY;
-<<<<<<< HEAD
-// const SERVER = "http://192.168.219.100:4000";
-// const SERVER = "http://172.16.104.219:5002";
-=======
-
->>>>>>> haeguri
 const SERVER = API_KEY + ":4000";
 const FLASK_SERVER = "http://localhost:5000";
 
