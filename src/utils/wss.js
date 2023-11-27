@@ -8,10 +8,11 @@ import {
 } from "../store/actions";
 import { store } from "../store/index";
 import * as webRTCHandler from "./webRTCHandler";
+import dotenv from "dotenv";
+dotenv.config();
+const API_KEY = process.env.REACT_APP_API_KEY;
 
-// const SERVER = "http://192.168.219.100:4000";
-// const SERVER = "http://172.16.104.219:5002";
-const SERVER = "http://192.168.35.165:4000";
+const SERVER = API_KEY + ":4000";
 const FLASK_SERVER = "http://localhost:5000";
 
 let socket = null;

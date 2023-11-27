@@ -2,14 +2,15 @@ import ImageContainer from "../../components/ImageContainer";
 import Searchbar from "../../components/Searchbar";
 import StudyContent from "../../components/StudyContent";
 import Pagination from "../../components/Pagination";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import axiousInstance from "../../utils/axios";
 import { useEffect, useState } from "react";
 import SelectLimit from "../../components/SelectLimit/index";
 
 const StudyConsonant = () => {
-  const [searchParams] = useSearchParams();
-  const searchValue = searchParams.get("search");
+  const navigate = useNavigate();
+
+  const { type, pageUrl } = useParams();
   // 수어목록
   const [signLanguages, setSignlaguages] = useState([]);
   //현재 페이지
@@ -21,8 +22,6 @@ const StudyConsonant = () => {
   //db 시작 id
   const totalPage = Math.ceil(index / limit);
 
-  const { type } = useParams();
-
   const [type_KO, setType_KO] = useState("");
   const [type_Grade, setType_Grade] = useState("");
 
@@ -30,7 +29,7 @@ const StudyConsonant = () => {
     setTitle();
     fetchIndex();
     fetchSignLanguages(page, limit);
-  }, [page, limit]);
+  }, [limit, page]);
 
   const setTitle = () => {
     if (type === "consonant") {
@@ -83,6 +82,7 @@ const StudyConsonant = () => {
         setPage(page + 1);
       }
     } else if (value === "&raquo" || value === "... ") {
+      // navigate(`/study/${type}/${totalPage}`);
       setPage(totalPage);
     } else {
       setPage(value);
@@ -96,14 +96,6 @@ const StudyConsonant = () => {
         noButton
       />
 
-      <Searchbar />
-
-      {searchValue && (
-        <h1 className="study-search-text">
-          “{searchValue}”에 대한 검색 결과입니다.
-        </h1>
-      )}
-
       <StudyContent type={type} list={signLanguages} />
 
       <div className="pagination-container">
@@ -112,7 +104,7 @@ const StudyConsonant = () => {
           totalPage={totalPage}
           page={page}
           limit={limit}
-          siblings={1}
+          siblings={2}
           onPageChange={handlePageChage}
         />
       </div>

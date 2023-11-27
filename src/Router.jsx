@@ -51,12 +51,10 @@ const Router = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/live-call" element={<LiveCall />} />
         <Route path="/study" element={<Study />} />
-        <Route path="/study/:type/:page" element={<StudyConsonant />} />
-        {/* <Route path="/study/word" element={<StudyWord />} />
-        <Route path="/study/sentence" element={<StudySentence />} /> */}
+        <Route path="/study/:type/:pageUrl" element={<StudyConsonant />} />
         <Route path="/study/:type/:page/:id" element={<StudyDetail />} />
-        {/* <Route path="/team" element={<Team />} /> */}
         <Route path="/search-result" element={<SearchResult />} />
+        <Route path="/search-result/:id" element={<StudyDetail />} />
         {/* 로그인한 사람만 갈 수 있는 경로 */}
         <Route element={<ProtectedRoutes isAuth={isAuth} />}>
           <Route path="/live-call/login" element={<LiveCallLogin />} />

@@ -16,7 +16,7 @@ const HeaderRight = () => {
   const isAuth = useSelector((state) => state.user?.isAuth);
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
-
+  const input = document.querySelector("#headerSearch");
   const handleLogout = () => {
     dispatch(logoutUser()).then(() => {
       navigate("/login");
@@ -26,18 +26,19 @@ const HeaderRight = () => {
   return (
     <div className="right">
       <form
-        id="searchbar"
+        id="headerSearchbar"
         className="search-wrapper"
         onSubmit={(e) => {
           e.preventDefault();
+          input.value = "";
           navigate(`/search-result?search=${search}`);
         }}
       >
         <IconSearch />
         <input
+          id="headerSearch"
           type="search"
           placeholder="Search..."
-          value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
       </form>
