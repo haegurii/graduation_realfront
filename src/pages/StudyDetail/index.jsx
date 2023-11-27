@@ -3,8 +3,6 @@ import "./index.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import ImageContainer from "../../components/ImageContainer";
 import { useMemo } from "react";
-
-import testImage from "../../assets/images/test.png";
 import BackButton from "../../components/BackButton/index";
 
 const StudyDetail = () => {
@@ -12,13 +10,13 @@ const StudyDetail = () => {
   const location = useLocation();
   const item = location.state.item;
 
-  
   const { pathname } = useLocation();
 
   const currentTitle = useMemo(() => {
     if (pathname.includes("consonant")) return "1단계 자음 모음 학습하기";
-    if (pathname.includes("word")) return "2단계 단어 학습하기";
-    return "3단계 문장 학습하기";
+    else if (pathname.includes("word")) return "2단계 단어 학습하기";
+    else if (pathname.includes("sentence")) return "3단계 문장 학습하기";
+    else return "검색";
   }, [pathname]);
 
   return (
@@ -44,7 +42,6 @@ const StudyDetail = () => {
       </div>
 
       <BackButton onClick={useNavigate(-1)} />
-      
     </div>
   );
 };

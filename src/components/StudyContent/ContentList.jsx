@@ -9,10 +9,7 @@ const ContentList = ({ type, list }) => {
         <div
           key={index}
           className="study-content-item"
-          onClick={() =>
-            navigate(`/study/${type}/${item.id}`, { state: { item: item } })
-          }
-          
+          onClick={() => navigate(`./${item.id}`, { state: { item: item } })}
         >
           <div className="study-image-wrapper">
             <img
@@ -22,11 +19,8 @@ const ContentList = ({ type, list }) => {
             />
           </div>
           <h1 className="study-content-title">{item.name}</h1>
-
-                  
         </div>
       ))}
-
     </div>
   );
 };

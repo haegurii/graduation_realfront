@@ -10,11 +10,6 @@ const Pagination = (props) => {
 
   return (
     <div className="pagination">
-      {/* <span className="prev">〈</span>
-      <span className="page">1</span>
-      <span className="page">2</span>
-      <span className="page">3</span>
-      <span className="next">〉</span> */}
       <ul>
         <span className="prev" onClick={() => props.onPageChange("&laquo")}>
           &laquo;

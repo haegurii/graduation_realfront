@@ -23,7 +23,15 @@ const Searchbar = () => {
           onChange={(e) => setValue(e.target.value)}
         />
       </form>
-      <button form="searchbar">검색</button>
+      <button
+        form="searchbar"
+        onClick={(e) => {
+          e.preventDefault();
+          navigate(`?search=${value}`);
+        }}
+      >
+        검색
+      </button>
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import Searchbar from "../../components/Searchbar";
 import StudyContent from "../../components/StudyContent";
-import testImage from "../../assets/images/test.png";
 import axiousInstance from "../../utils/axios";
 import { useEffect, useState } from "react";
 
@@ -17,17 +16,20 @@ const SearchResult = () => {
   }, [search]);
 
   const searchSignLanguages = async (search) => {
-    const params = {
-      search,
-    };
-    try {
-      const response = await axiousInstance.get(`signLanguages/search`, {
-        params,
-      });
-      console.log("search:" + search + "response:" + response);
-      setSignLanguages(response.data.signLanguages);
-    } catch (error) {
-      console.log(error);
+    if (search === "") {
+      setSignLanguages([]);
+    } else {
+      const params = {
+        search,
+      };
+      try {
+        const response = await axiousInstance.get(`signLanguages/search`, {
+          params,
+        });
+        setSignLanguages(response.data.signLanguages);
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
