@@ -1,0 +1,36 @@
+.study-content-list {
+  margin: 0 8% 100px;
+}
+
+.study-content-list hr {
+  margin-bottom: 60px;
+  max-width: 900px;
+  border: 0;
+  border-top: 1px solid #d8d8d8;
+}
+
+.study-content-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 60px;
+}
+
+.study-image-wrapper {
+  width: 40%;
+}
+
+.study-image-wrapper img {
+  width: 60%;
+}
+
+.study-content-title {
+  width: 300px;
+}
+
+.content-line
+{
+  border:0px;
+  border-top:5px solid #663399;
+}

@@ -1,0 +1,50 @@
+.header-title {
+  padding: 80px 8%;
+}
+
+.header-title > div > p,
+.header-title > div > h1 {
+  text-align: center;
+}
+
+.header-title > div {
+  padding: 60px 90px;
+  background-color: #f7f9fe;
+  border-radius: 15px;
+}
+
+.header-title > div > p {
+  margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: #757575;
+}
+
+.header-title > div > h1 {
+  font-size: 48px;
+
+  letter-spacing: 0.2px;
+}
+
+.list-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 140px;
+  padding: 0 8%;
+}
+
+.list-container img {
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.list-container h2 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-align: center;
+  padding-right:50px;
+}

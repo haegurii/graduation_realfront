@@ -1,0 +1,63 @@
+.door-image-container {
+  position: relative;
+}
+
+.overlay,
+.bg {
+  width: 100%;
+  max-height: 730px;
+  height: calc(100vh - 160px);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f7f9fe;
+  z-index: -1;
+}
+
+.bg {
+  background: repeating-linear-gradient(
+    -45deg,
+    #becdf8,
+    #becdf8 1px,
+    transparent 1px,
+    transparent 70px
+  );
+}
+
+.contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  transition: opacity 1s;
+  opacity: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.contents > h1 {
+  max-width: 1000px;
+  color: #212121;
+  text-align: center;
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.contents > h2 {
+  max-width: 730px;
+  color: #424242;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+}

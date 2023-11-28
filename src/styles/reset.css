@@ -1,0 +1,87 @@
+:root {
+  --color-main: #3563e9;
+  --color-main2: #17aff0;
+}
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+button {
+  border: 0;
+  background-color: white;
+}
+
+input {
+  border: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+button {
+  transition: background-color 0.3s !important;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #193ca7 !important;
+}
+
+.hover-scale {
+  scale: 0.95;
+  transition: scale 0.5s;
+}
+
+.hover-scale:hover {
+  scale: 1;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.videos_portal_styles {
+  margin-left: 20%;
+  width: 60%;
+  height: calc(100vh - 10%);
+  left: 0;
+  top: 0;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#dummy_video_canvas {
+  display: none;
+}
