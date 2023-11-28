@@ -12,7 +12,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const API_KEY = process.env.REACT_APP_API_KEY;
 const SERVER = API_KEY + ":4000";
-const FLASK_SERVER = "http://localhost:5000";
+const FLASK_SERVER = "http://127.0.0.1:5000";
 
 let socket = null;
 let socket_flask = null;

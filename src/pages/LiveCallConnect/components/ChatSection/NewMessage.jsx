@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SendMessageButton from "../../../../assets/images/sendMessageButton.svg";
 import * as webRTCHandler from "../../../../utils/webRTCHandler";
 import { connect } from "react-redux";
@@ -11,21 +11,15 @@ const NewMessage = ({
   setSttMessageAction,
   setSignLanguageMessageAction,
 }) => {
-  const [message, setMessage] = useState("");
-
-  const handleTextChange = (event) => {
-    console.log("messagetest----------------");
+  useEffect(() => {
     if (sttMessage !== "") {
-      event.target.value = sttMessage;
-      setSttMessageAction("");
+      setMessage(sttMessage);
     }
     if (signLanguageMessage !== "") {
-      event.target.value = signLanguageMessage;
-      setSignLanguageMessageAction("");
+      setMessage(signLanguageMessage);
     }
-    // 메시지 입력값을 현재 입력값으로 변경
-    setMessage(event.target.value);
-  };
+  }, [sttMessage, signLanguageMessage]);
+  const [message, setMessage] = useState("");
 
   const handleKeyPressed = (event) => {
     if (event.key === "Enter") {
@@ -36,6 +30,10 @@ const NewMessage = ({
       // input 태그가 sendMessage()를 실행시키게 만듬
       sendMessage();
     }
+  };
+  const handleTextChange = (event) => {
+    console.log("messagetest----------------");
+    setMessage(event.target.value);
   };
 
   const sendMessage = () => {

@@ -3,10 +3,6 @@ import dotenv from "dotenv";
 dotenv.config();
 const API_KEY = process.env.REACT_APP_API_KEY;
 const axiousInstance = axios.create({
-  // baseURL: import.meta.env.RPOD ? "" : "http://localhost:4000",
-  // baseURL: import.meta.env.RPOD ? "" : "http://192.168.35.213:4000",
-  // baseURL:
-  //   process.env.NODE_ENV === "production" ? "" : "http://192.168.219.100:4000",
   baseURL: process.env.NODE_ENV === "production" ? "" : API_KEY + ":4000",
 });
 axiousInstance.interceptors.request.use(
