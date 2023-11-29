@@ -29,8 +29,7 @@
   width: 300px;
 }
 
-.content-line
-{
-  border:0px;
-  border-top:5px solid #663399;
+.content-line {
+  border: 0px;
+  border-top: 5px solid #663399;
 }

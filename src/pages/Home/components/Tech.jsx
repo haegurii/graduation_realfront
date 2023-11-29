@@ -1,20 +1,21 @@
-import HeaderTitle from './HeaderTitle';
+import HeaderTitle from "./HeaderTitle";
 
-import icon01 from '../../../assets/icons/icon_01.png';
-import icon02 from '../../../assets/icons/icon_02.png';
-import icon03 from '../../../assets/icons/icon_03.png';
-import icon04 from '../../../assets/icons/icon_04.png';
+import icon01 from "../../../assets/icons/icon_01.png";
+import icon02 from "../../../assets/icons/icon_02.png";
+import icon03 from "../../../assets/icons/icon_03.png";
+import icon04 from "../../../assets/icons/icon_04.png";
 const Tech = () => {
   return (
     <div className="tech">
       <HeaderTitle
         title="Tech Stack"
-        subTitle="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."
+        subTitle="Utilizing Google's MediaPipe for gesture recognition, "
+        subTitle1="it recognizes sign language to provide better opportunities for the Deaf community."
       />
 
       <div className="techs">
         <div className="member-card">
-        <div className="tech-profile">
+          <div className="tech-profile">
             <img src={icon01} alt="" />
           </div>
           <div className="member-text">
@@ -27,7 +28,7 @@ const Tech = () => {
         </div>
 
         <div className="member-card">
-        <div className="tech-profile">
+          <div className="tech-profile">
             <img src={icon02} alt="" />
           </div>
           <div className="member-text">
@@ -37,7 +38,7 @@ const Tech = () => {
         </div>
 
         <div className="member-card">
-        <div className="tech-profile">
+          <div className="tech-profile">
             <img src={icon03} alt="" />
           </div>
           <div className="member-text">
@@ -49,7 +50,7 @@ const Tech = () => {
         </div>
 
         <div className="member-card">
-        <div className="tech-profile">
+          <div className="tech-profile">
             <img src={icon04} alt="" />
           </div>
           <div className="member-text">

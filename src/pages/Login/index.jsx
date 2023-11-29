@@ -37,7 +37,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className="form_container" onSubmit={handleSubmit(onSubmit)}>
         <div className="livecall-read-content-join">
           <div className="login-input-wrapper">
             <h3>Login</h3>

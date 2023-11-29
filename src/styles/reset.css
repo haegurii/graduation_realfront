@@ -55,7 +55,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: #193ca7 !important;
+  background-color: #193ca7;
 }
 
 .hover-scale {

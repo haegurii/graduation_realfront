@@ -71,7 +71,7 @@ const StudyConsonant = () => {
   };
 
   const handlePageChage = (value) => {
-    if (value === "&laquo" || value === " ...") {
+    if (value === "&laquo" || value === "... ") {
       setPage(1);
     } else if (value === "&lsaquo") {
       if (page !== 1) {
@@ -81,8 +81,9 @@ const StudyConsonant = () => {
       if (page !== totalPage) {
         setPage(page + 1);
       }
-    } else if (value === "&raquo" || value === "... ") {
+    } else if (value === "&raquo" || value === " ...") {
       // navigate(`/study/${type}/${totalPage}`);
+      console.log(totalPage);
       setPage(totalPage);
     } else {
       setPage(value);

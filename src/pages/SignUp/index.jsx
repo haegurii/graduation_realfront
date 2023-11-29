@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import './index.css';
-import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
-import { registerUser } from '../../store/thunkFunctions';
+import { Link } from "react-router-dom";
+import "./index.css";
+import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { registerUser } from "../../store/thunkFunctions";
 
 const SignUp = () => {
   const {
@@ -10,7 +10,7 @@ const SignUp = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm({ mode: 'onChange' });
+  } = useForm({ mode: "onChange" });
 
   const dispatch = useDispatch();
 
@@ -29,22 +29,22 @@ const SignUp = () => {
   };
 
   const userEmail = {
-    required: '필수 필드입니다.',
+    required: "필수 필드입니다.",
   };
   const userName = {
-    required: '필수 필드입니다.',
+    required: "필수 필드입니다.",
   };
   const userPassword = {
-    required: '필수 필드입니다.',
+    required: "필수 필드입니다.",
     minLength: {
       value: 4,
-      message: '최소 4글자 입니다.',
+      message: "최소 4글자 입니다.",
     },
   };
 
   return (
     <div className="sign-up-container">
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className="form_container" onSubmit={handleSubmit(onSubmit)}>
         <div className="livecall-read-content-join">
           <div className="sign-up-input-wrapper">
             <h3>SignUp</h3>
@@ -55,7 +55,7 @@ const SignUp = () => {
               className="sign-up-input"
               type="email"
               placeholder="Add Your Email"
-              {...register('email', userEmail)}
+              {...register("email", userEmail)}
             />
 
             {errors?.email && (
@@ -70,7 +70,7 @@ const SignUp = () => {
               className="sign-up-input"
               type="text"
               placeholder="Add Your Nickname"
-              {...register('name', userName)}
+              {...register("name", userName)}
             />
             {errors?.name && (
               <div>
@@ -84,7 +84,7 @@ const SignUp = () => {
               className="sign-up-input"
               type="password"
               placeholder="Add Your Password"
-              {...register('password', userPassword)}
+              {...register("password", userPassword)}
             />
             {errors?.password && (
               <div>
@@ -98,7 +98,7 @@ const SignUp = () => {
                   id="checkbox"
                   className="input-check"
                   type="checkbox"
-                  {...register('role')}
+                  {...register("role")}
                 />
                 <label htmlFor="checkbox">농인여부</label>
               </div>

@@ -17,7 +17,7 @@ nav > ul {
 
 nav > ul > li {
   font-size: 18px;
-  min-width:max-content;
+  min-width: max-content;
 }
 
 nav > ul > li:hover {
@@ -79,4 +79,7 @@ nav > ul > li:hover {
 .right > .button-group .Login {
   background-color: var(--color-main);
   color: white;
+}
+.right > .button-group .Login:hover {
+  background-color: #193ca7;
 }

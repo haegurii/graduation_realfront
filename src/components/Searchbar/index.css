@@ -35,3 +35,6 @@
   font-weight: 500;
   letter-spacing: 0.46px;
 }
+.searchbar-container button:hover {
+  background-color: #193ca7;
+}

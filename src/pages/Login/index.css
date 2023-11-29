@@ -1,7 +1,16 @@
 .login-container {
   display: flex;
   justify-content: center;
-  margin:60px 0 120px;
+  margin: 60px 0 120px;
+}
+
+.form_container {
+  border-radius: 40px;
+  box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.livecall-read-content-join {
+  margin: 30px;
 }
 
 .login-input-wrapper {
@@ -46,6 +55,6 @@
   font-size: 16px;
   font-weight: 500;
   border-radius: 8px;
-  background-color: #007fe6;
+  background-color: var(--color-main);
   color: white;
 }

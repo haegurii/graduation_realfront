@@ -15,12 +15,12 @@ const ConnectingButtons = () => {
   return (
     <div className="connecting_buttons_container">
       <ConnectingButton
-        buttonText="Join a meeting"
+        buttonText="방 들어가기"
         onClickHandler={pushToJoinRoomPage}
       />
       <ConnectingButton
         createRoomButton
-        buttonText="Host a meeting"
+        buttonText="방 만들기"
         onClickHandler={pushToJoinRoomPageAsHost}
       />
     </div>

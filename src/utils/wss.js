@@ -12,11 +12,13 @@ import dotenv from "dotenv";
 dotenv.config();
 const API_KEY = process.env.REACT_APP_API_KEY;
 const SERVER = API_KEY + ":4000";
-const FLASK_SERVER = "http://127.0.0.1:5000";
+// const FLASK_SERVER = "http://127.0.0.1:5000";
+const FLASK_SERVER = API_KEY + ":5000";
 
 let socket = null;
 let socket_flask = null;
-
+let signMessage = "";
+let idx = 0;
 export const connectWithSocketIOServer = () => {
   socket = io(SERVER);
   socket_flask = io(FLASK_SERVER);
@@ -34,7 +36,13 @@ export const connectWithSocketIOServer = () => {
 
   socket_flask.on("sign_language_translation", (translation) => {
     console.log("sign_language_translation:", translation);
-    store.dispatch(setSignLanguageMessage(translation));
+    if (idx === 6) {
+      signMessage = "";
+      idx = 0;
+    }
+    signMessage += translation + " ";
+    store.dispatch(setSignLanguageMessage(signMessage));
+    idx += 1;
   });
 
   socket.on("connect", () => {

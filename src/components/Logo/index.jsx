@@ -1,13 +1,13 @@
-import './index.css';
+import "./index.css";
 
-import IconLogo from '../../assets/icons/icon_logo.svg';
+import IconLogo from "../../assets/icons/icon_logo.svg";
 
 const Logo = () => {
   return (
     <div className="logo">
       {/* <IconLogo /> */}
       {/* <img src={IconLogo} /> */}
-      <span>SIGN_LANGUAGE</span>
+      <span>수어독스</span>
     </div>
   );
 };

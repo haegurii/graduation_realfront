@@ -7,25 +7,18 @@
   margin-bottom: 100px;
 }
 
-.pagination .prev,
-.pagination .next {
+.pagination span {
+  padding: 8px 16px;
   cursor: pointer;
-  margin: 0 15px;
-}
-
-.pagination .page {
-  cursor: pointer;
-  margin: 0 10px;
 }
 
 .pagination .active {
   cursor: pointer;
-  margin: 0 10px;
-  color: blue;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--color-main);
 }
-.pagination .prev:hover,
-.pagination .next:hover,
-.pagination .page:hover {
-  text-decoration: underline;
-  color: red;
+.pagination span:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
 }
